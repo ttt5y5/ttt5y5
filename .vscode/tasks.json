@@ -4,12 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName":"chrome",
-            "label": "echo",
+            "label": "Chrome",
             "type": "process",
             "command": "chrome.exe",
-            "windows":{
-                "command": "C:\\Program Files\\Google\\Chrome"
+            "windows": {
+                "command": "C:\\Program Files\\Google\\Chrome\\Application"
+            },
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         }
     ]
