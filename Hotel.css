@@ -1,0 +1,27 @@
+#header{
+    font-size: 40px;
+    margin-left: 0px;
+}
+#firstTd{
+    margin-left: 0px;
+}
+#secondTd{
+    margin-right: 0px;
+}
+#roomOptionTitle{
+    margin-left: 0px;
+    font-size: 20px;
+}
+#roomOptionArea{
+    margin-right: 0px;
+}
+#roomMenuTitle{
+    border: 1px solid black;
+    padding-left: 0px;
+    margin: 20px;
+}
+#roomMenu{
+    margin-left: 0px;
+    padding-left: 0px;
+    border : 1px solid black;
+}
