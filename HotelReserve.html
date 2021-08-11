@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Hotel.css">
+    <title>예약관리</title>
+</head>
+<body>
+    <header id="header">
+        <a id="roomControl">객실관리</a>
+        <a id="roomReserve">예약관리</a>
+    </header>
+    <div>
+        <div id="searchReserve">
+            <div>숙박기간 <input type="date">~<input type="date"></div>
+            <div>객실분류 <input type="text"><input type="submit" value="찾기"></div>
+        </div>
+        <div id=ableReserveTitle>예약가능</div>
+        <div id="ableReserve">
+            <div>
+                <div>한라산 SuiteRoom 4명 160,000원</div>
+                <div>백두산 SuiteRoom 4명 180,000원</div>
+                <div>설악산 FamilyRoom 6명 220,000원</div>
+                <div>광덕산 CoupleRoom 2명 120,000원</div>
+            </div>
+        </div>
+    </div>
+        <div id=reserveList>
+            <div>객실이름 <input type="text"></div>
+            <div>숙박기간 <input type="date">~<input type="date">></div>
+            <div>숙박인원 <input type="number"></div>
+            <div>1박비용 <input type="text"></div>
+            <div>총 숙박비 <input type="text"></div>
+            <div>예약자 모바일 <input type="tel"></div>
+        </div>
+        <div id="btn2">
+            <input type="button" class="button" value="등록" style="color:seagreen;">
+            <input type="button" class="button" value="취소" style="color: slateblue;">
+            <input type="button" class="button" value="삭제" style="color: red;">
+        </div>
+    <div id="closeReserveTitle">예약된객실</div>
+    <div id="closeReserve">
+        <div id="closeReserveList">
+            <div>백두산 20210811~20210812 4명 01012341234</div>
+            <div>한라산 20210811~20210812 4명 01012341234</div>
+            <div>설악산 20210812~20210813 6명 01056785678</div>
+            <div>광덕산 20210812~20210815 2명 01012345678</div>
+        </div>
+    </div>
+</body>
+</html>

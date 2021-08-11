@@ -5,46 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Hotel.css">
-    <title>Hotel</title>
+    <title>객실관리</title>
+
 </head>
 <body>
-<table>
-    <td id=firstTd>
-        <header id=header>
-            <a>객실관리</a>
-            <a>예약관리</a>
-        </header>
-        <div id=roomMenuTitle>
-            <a>객실목록</a>
-            <div id="roomMenu">
-                <ul>백두산 suitRoom 4명</ul>
-                <ul>한라산 familyRoom 6명</ul>
-                <ul>설악산 coupleRoom 2명</ul>
-            </div>
-        </div>
-    </td>   
+<header id="header">
+    <a id="roomControl">객실관리</a>
+    <a id="roomReserve">예약관리</a>
+</header>
+<div id="roomListTitle">객실목록</div>
+<div id="room">
+    <div id="roomList">
+        <div>백두산 SuiteRoom 4명</div>
+        <div>한라산 SuiteRoom 4명</div>
+        <div>설악산 FamilyRoom 6명</div>
+        <div>광덕산 CoupleRoom 2명</div>
+    </div>
+</div>
+<div id="roomOption">
+        <div>객실 이름 <input type="text" value=""> </div>
+        <div>객실 분류 <input type="text"></div>
+        <div>숙박가능인원 <input type="number"> 명</div>
+        <div>1박 요금 <input type="text"> 원</div>
+</div>
+<div id="btn">
+    <input type="button" class="button" value="등록" style="color:seagreen;">
+    <input type="button" class="button" value="수정" style="color: slateblue;">
+    <input type="button" class="button" value="삭제" style="color: red;">
+</div>   
 
-    <td id="secondTd">
-        <div id=roomOption>
-            <div id=roomOptionTitle>
-                <ul>객실이름</ul>
-                <ul>객실분류</ul>
-                <ul>숙박가능인원</ul>
-                <ul>1박 요금</ul>  
-            </div>
-            <div id=roomOptionArea>
-                <input type="text" name="roomName" value="">
-                <textarea name="roomClass" rows="" cols="">??</textarea>
-                <textarea name="roomSize" rows="" cols="">??</textarea>
-                <input type="text" name="roomPrice" value="">
-            </div>
-        </div>
-        <div id="buttonArea">
-            <button>등록</button>
-            <button>삭제</button>
-            <button>초기화</button>
-        </div>
-    </td>
-</table>
 </body>
 </html>
