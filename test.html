@@ -7,11 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>황선호</h1>
-    <h1>한라비발디504호</h1>
-    <script>
-        document.write("황선호<br>");
-        document.write("한라비발디504호");
-    </script>
+
 </body>
+<input type=button value="     시작     "  name=btnGo id=btnGo>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+$(document)
+.on('click','#btnGo',function (){
+    gn=5;
+    timer=setInterval(function(){
+        if(gn<-5){
+            clearInterval(timer);
+            $('#btnGo').val('시작');
+            return;
+        }
+    $('#btnGo').val(gn);
+    gn--;
+    },1000);
+});
+
+// function doStrat(){
+//     gn=5;
+//     timer=setInterval(function(){
+//         if(gn<1){
+//             clearInterval(timer);
+//             document.getElementsByName('btnGo')[0].value='시작';
+//             return;
+//         }
+//         document.getElementsByName('btnGo')[0].value=gn;
+//         gn--;
+//     },1000);
+// }
+</script>
+
 </html>
