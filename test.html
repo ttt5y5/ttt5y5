@@ -9,35 +9,53 @@
 <body>
 
 </body>
-<input type=button value="     시작     "  name=btnGo id=btnGo>
+text:<input type=text id=txtName value="park"><br>
+hidden:<input type=hidden id=txtHidden value="hidden"><br>
+radio:<input type=radio name=gender id=male>남성&nbsp;
+<input type=radio name=gender id=female>여성<br>
+number:<input type=number id="txtNum"><br>
+checkbox:<input type=checkbox name=hobby id=movie>영화보기
+<input type=checkbox name=hobby id=riding>모터사이클
+<input type=checkbox name=hobby id=climbing>등산
+textarea:<textarea id=txtAddress rows=3 cols=60></textarea><br>
+Select: <select id=selNation size=5>
+    <option value="Korea">대한민국</option>
+    <option value="USA">USA</option>
+    <option value="FR">France</option>
+    <option value="UK">England</option>
+</select><br>
+<button id=btnShow>보기</button>
+<div id=dvShow style='background-color:yellow;width: 300px; height: 200px;' ></div>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
-$(document)
-.on('click','#btnGo',function (){
-    gn=5;
-    timer=setInterval(function(){
-        if(gn<-5){
-            clearInterval(timer);
-            $('#btnGo').val('시작');
-            return;
+    $(document)
+    .on('click','#btnShow',function(){
+        str1=$('#txtName').val();
+        str2=$('#txtHidden').val();
+        if($('#male').is(':checked')){
+            str3='male';
+        }else if($('#female').is(':checked')){
+            str3='female';
+        }else{
+            str3='';
         }
-    $('#btnGo').val(gn);
-    gn--;
-    },1000);
-});
+        str4=$('#txtNum').val();
+        str5='';
+        if($('#movie').is(':checked')){
+            str5='영화보기'
+        }
+        if($('#riding').is(':checked')){
+            str5+='모터사이클'
+        }
+        if($('#climbing').is(':checked')){
+            str5+='등산'
+        }
+        str6=$('#txtAddress').val();
+        str7=$('#selNation').val();
+        str=str1+'<br>'+str2+'<br>'+str3+'<br>'+str4+'<br>'+str5+'<br>'+str6+'<br>'+str7
+        $('#dvShow').html(str);
 
-// function doStrat(){
-//     gn=5;
-//     timer=setInterval(function(){
-//         if(gn<1){
-//             clearInterval(timer);
-//             document.getElementsByName('btnGo')[0].value='시작';
-//             return;
-//         }
-//         document.getElementsByName('btnGo')[0].value=gn;
-//         gn--;
-//     },1000);
-// }
+    })
 </script>
 
 </html>
