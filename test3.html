@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <input type="button" id="btnAdd" value="n값 입력">
+    <table border=1 id="tbl">
+    </table>
+    <script>
+        $(document)
+        .on('click', '#btnAdd',function(){
+            n=prompt('n값 입력');
+            for(a=0; a<n; a++){
+                $('#tbl').append('<tr></tr>')
+                for(b=0; b<n; b++){
+                    $('#tbl tr:eq('+a+')').append('<td></td>')
+                }
+            }
+            num=1;
+            for(i=0; i<n; i++){
+                for(j=0; j<n; j++){
+                // if($('#tbl tr:eq('+i+') td:eq('+j+')').text.val()!==''){
+                //     return false;
+                // }
+                if(j==n-1){
+                    for(q=0; q<n; q++){
+                        $('#tbl tr:eq('+q+') td:eq('+j+')').text(num);
+                    }
+                }
+                $('#tbl tr:eq('+i+') td:eq('+j+')').text(num);
+                num++
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

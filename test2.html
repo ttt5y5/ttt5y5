@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <input type="button" id="btnAdd" value="채우기">
+    <table border=1 id="tbl">
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <script>
+        $(document)
+        .on('click', '#btnAdd',function(){
+            n=1;
+            nn=0;
+            for(a=0; a<$('#tbl tr').length; a++){
+                for(b=0; b<$('#tbl tr:eq(0) td').length; b++){
+                    if(a%2==0){
+                        $('#tbl').find('tr:eq('+a+') td:eq('+b+')').text(n)
+                        n++
+                        if(b+1==$('#tbl tr:eq(0) td').length){
+                        nn=n+4
+                        }   
+                    }
+                    if(a%2==1){
+                        $('#tbl').find('tr:eq('+a+') td:eq('+b+')').text(nn)
+                        nn--
+                        if(b+1==$('#tbl tr:eq(0) td').length){
+                        n=nn+6
+                        }   
+                    }
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>
